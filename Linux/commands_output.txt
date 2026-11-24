@@ -1,0 +1,53 @@
+=== Home Directory Contents ===
+total 48
+drwxr-x--- 7 rishav rishav 4096 Nov 24 17:44 .
+drwxr-xr-x 3 root   root   4096 Nov 24 13:36 ..
+-rw------- 1 rishav rishav 3482 Nov 24 18:34 .bash_history
+-rw-r--r-- 1 rishav rishav  220 Nov 24 13:36 .bash_logout
+-rw-r--r-- 1 rishav rishav 3771 Nov 24 13:36 .bashrc
+drwxr-x--- 4 rishav rishav 4096 Nov 24 13:37 .cache
+drwxr-x--- 4 rishav rishav 4096 Nov 24 14:11 .config
+-rw-r--r-- 1 rishav rishav  250 Nov 24 16:32 .gitconfig
+drwx------ 3 rishav rishav 4096 Nov 24 17:44 .local
+-rw-rw-r-- 1 rishav rishav    0 Nov 24 13:37 .motd_shown
+-rw-r--r-- 1 rishav rishav  807 Nov 24 13:36 .profile
+drwxr-xr-x 8 rishav rishav 4096 Nov 24 17:53 DeveloperPortfolio
+drwxr-xr-x 8 rishav rishav 4096 Nov 24 16:23 DeveloperPortfolio-backup
+
+=== Running Processes ===
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.3  24264 15420 ?        Ss   14:01   0:01 /sbin/init
+root           2  0.0  0.0   3760  2336 hvc0     Sl+  14:01   0:00 /init
+root           3  0.0  0.0   3612  2096 hvc0     S+   14:01   0:00 init-watcher
+root           7  0.0  0.0   3792  2396 hvc0     Sl+  14:01   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root          90  0.0  0.3  34752 12072 ?        Ss   14:01   0:02 /usr/lib/systemd/systemd-udevd
+root         106  0.0  0.0   2888  1956 ?        Ss   14:01   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n -F 1
+root         107  0.0  0.0   4472  3140 ?        Ss   14:01   0:00 /usr/sbin/cron -f -P
+message+     108  0.0  0.1   8792  5460 ?        Ss   14:01   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         128  0.0  0.7  44096 29732 ?        Ss   14:01   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+
+=== Disk Usage ===
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdd       1007G  1.6G  955G   1% /
+rootfs          1.9G  3.3M  1.9G   1% /init
+none            1.9G     0  1.9G   0% /dev/shm
+none            1.9G  500K  1.9G   1% /run
+none            1.9G     0  1.9G   0% /run/lock
+none            1.9G   72K  1.9G   1% /run/user
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+drivers         477G   90G  388G  19% /usr/lib/wsl/drivers
+none            1.9G     0  1.9G   0% /usr/lib/wsl/lib
+none            1.9G  4.0K  1.9G   1% /mnt/wsl
+none            1.9G   80K  1.9G   1% /mnt/wslg/versions.txt
+none            1.9G   80K  1.9G   1% /mnt/wslg/doc
+none            1.9G     0  1.9G   0% /usr/lib/modules/6.18.40.1-microsoft-standard-WSL2
+tmpfs           1.9G  4.0K  1.9G   1% /tmp
+C:\             477G   90G  388G  19% /mnt/c
+tmpfs           380M   12K  380M   1% /run/user/1000
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+
+=== Memory Usage ===
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       541Mi       3.0Gi       4.1Mi       344Mi       3.2Gi
+Swap:          1.0Gi          0B       1.0Gi
