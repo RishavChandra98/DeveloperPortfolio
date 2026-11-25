@@ -1,0 +1,25 @@
+=======================================
+      SYSTEM INFORMATION REPORT
+=======================================
+Name: Rishav Chandra Prasad
+Roll Number: 2601730356
+Date: Wed Nov 25 06:23:28 UTC 2026
+
+=== CPU Information ===
+CPU(s):                                  8
+Model name:                              Intel(R) Core(TM) i5-10310U CPU @ 1.70GHz
+Core(s) per socket:                      4
+
+=== Memory Information ===
+Total RAM: 3.7Gi
+Used RAM: 474Mi
+
+=== Top 3 Processes by CPU Usage ===
+PID COMMAND CPU%
+      1 systemd          0.1
+      2 init-systemd(Ub  0.0
+      3 init-watcher     0.0
+
+========================================
+Report generated successfully.
+========================================

@@ -21,3 +21,8 @@ this repository demonstrates the technical skills developed throughout the semes
 
 - GitHub: https://github.com/RishavChandra98
 - Linkedin: https://www.linkedin.com/in/rishav-chandra-prasad-b105163b6
+## Supporting Screenshots
+
+### Shell Script Backup Demonstration
+
+![Backup Demo](Screenshots/backup_demo.png)
