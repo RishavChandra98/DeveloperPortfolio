@@ -11,7 +11,7 @@ this repository demonstrates the technical skills developed throughout the semes
 
 ## Repository Structure
 
-- linux/ - system documentation and Linux commands
+- Linux/ - system documentation and Linux commands
 - ShellScripts/ - Bash scripting and automation 
 - API/ - REST API interaction and JSON documentaion
 - Portfolio/ - Resume and career learning roadmap
