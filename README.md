@@ -26,3 +26,10 @@ this repository demonstrates the technical skills developed throughout the semes
 ### Shell Script Backup Demonstration
 
 ![Backup Demo](Screenshots/backup_demo.png)
+
+### Professional Profiles
+
+- [GitHub Profile](Screenshots/github_profile.png)
+- [LinkedIn Profile](Screenshots/linkedin_profile.png)
+- [LinkedIn Education](Screenshots/linkedin_education.png)
+- [LinkedIn Projects](Screenshots/linkedin_projects.png)
