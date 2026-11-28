@@ -13,7 +13,7 @@ this repository demonstrates the technical skills developed throughout the semes
 
 - linux/ - system documentation and Linux commands
 - ShellScripts/ - Bash scripting and automation 
-- API/ - Resume and career learning roadmap
+- API/ - REST API interaction and JSON documentaion
 - Portfolio/ - Resume and career learning roadmap
 - Screenshots/ - Supporting evidence
 
