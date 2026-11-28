@@ -1,160 +1,221 @@
-cd  ~/DeveloperPortfolio
 
-python3 - <<'PY'
-from pathlib import Path
-import re
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishav Chandra Prasad | Portfolio</title>
 
-file = Path("index.html")
-html = file.read_text()
-
-css = """
 <style>
-    * {
-        box-sizing: border-box;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4f3ee;
+    color: #263b32;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+header {
+    background: linear-gradient(120deg, #163c32, #28634c);
+    color: white;
+    padding: 45px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+header small {
+    letter-spacing: 3px;
+    color: #b9d7c8;
+}
+
+header h1 {
+    font-size: 38px;
+    margin: 12px 0;
+}
+
+header p {
+    margin: 4px 0;
+    color: #d9e9df;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+section {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    border: 1px solid #e0e6df;
+    box-shadow: 0 4px 18px #163c320a;
+    transition: transform 0.2s;
+    overflow-wrap: anywhere;
+}
+
+section:hover {
+    transform: translateY(-4px);
+}
+
+h2 {
+    color: #163c32;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #e5eee8;
+    color: #245844;
+    padding: 7px 15px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.project {
+    background: #f5f8f5;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dce8df;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+a {
+    color: #28634c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    background: #163c32;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 7px;
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
     }
 
-    body {
-        margin: 0;
-        padding: 32px;
-        font-family: 'Segoe UI', Arial, sans-serif;
-        background: #F5F5EF;
-        color: #243B32;
-        line-height: 1.7;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
-        max-width: 1200px;
-        margin-inline: auto;
+    .container {
+        padding: 15px;
     }
 
     header {
-        grid-column: 1 / -1;
-        background: linear-gradient(120deg, #143D35, #245C48);
-        color: #FFFFFF;
-        padding: 48px 40px;
-        border-radius: 18px;
-        text-align: left;
+        padding: 28px;
     }
 
     header h1 {
-        font-size: clamp(28px, 4vw, 42px);
-        margin: 0 0 12px;
-        letter-spacing: -1px;
-        color: #FFFFFF;
+        font-size: 28px;
     }
-
-    header p {
-        color: #D1E7DA;
-        margin: 3px 0;
-        font-size: 16px;
-    }
-
-    section {
-        background: #FFFFFF;
-        padding: 28px;
-        border: 1px solid #E1E7DF;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(20, 61, 53, 0.05);
-        transition: transform 0.2s, box-shadow 0.2s;
-        overflow-wrap: anywhere;
-    }
-
-    section:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(20, 61, 53, 0.09);
-    }
-
-    h2 {
-        color: #143D35;
-        font-size: 23px;
-        margin-top: 0;
-        margin-bottom: 18px;
-    }
-
-    h3 {
-        color: #143D35;
-        margin-top: 0;
-    }
-
-    section p {
-        color: #52635B;
-    }
-
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .skills span {
-        display: inline-block;
-        background: #E5EFE8;
-        color: #245844;
-        padding: 7px 14px;
-        border-radius: 20px;
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-    .project {
-        background: #F7FAF7;
-        border: 1px solid #DCE8DF;
-        padding: 20px;
-        border-radius: 12px;
-    }
-
-    a {
-        color: #287557;
-        font-weight: 600;
-        text-decoration: none;
-    }
-
-    .project a {
-        display: inline-block;
-        background: #143D35;
-        color: white;
-        padding: 10px 18px;
-        border-radius: 8px;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    a:focus-visible {
-        outline: 3px solid #287557;
-        outline-offset: 4px;
-    }
-
-    @media (max-width: 700px) {
-        body {
-            grid-template-columns: 1fr;
-            padding: 16px;
-            gap: 16px;
-        }
-
-        header {
-            padding: 32px 24px;
-        }
-
-        section {
-            padding: 22px;
-        }
-    }
+}
 </style>
-"""
+</head>
 
-updated, count = re.subn(
-    r'<style\b[^>]*>.*?</style>',
-    lambda match: css,
-    html,
-    count=1,
-    flags=re.S | re.I
-)
+<body>
 
-if count != 1:
-    raise SystemExit("Existing CSS not found. No changes made.")
+<div class="container">
 
-file.write_text(updated)
-print("Website design updated successfully!")
-PY
+<header>
+    <small>PERSONAL PORTFOLIO</small>
+    <h1>Rishav Chandra Prasad</h1>
+    <p>B.Tech CSE (AI &amp; ML)</p>
+    <p>K.R. Mangalam University</p>
+    <p>Batch 2026-2030</p>
+</header>
+
+<div class="grid">
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        I am a Computer Science undergraduate interested
+        in Artificial Intelligence, Machine Learning and
+        Software Development. I enjoy exploring technology,
+        strengthening my programming skills and building
+        practical projects.
+    </p>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <div class="skills">
+        <span>Python</span>
+        <span>C</span>
+        <span>JavaScript</span>
+        <span>Linux</span>
+        <span>Bash</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>REST APIs</span>
+        <span>JSON</span>
+        <span>Markdown</span>
+    </div>
+</section>
+
+<section>
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>DeveloperPortfolio</h3>
+        <p>
+            An academic capstone project demonstrating
+            Linux system documentation, Bash automation,
+            GitHub workflows, REST API interaction and
+            professional portfolio development.
+        </p>
+
+        <a class="button"
+        href="https://github.com/RishavChandra98/DeveloperPortfolio">
+            View Repository
+        </a>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+
+    <p>Connect with me through my professional profiles.</p>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/RishavChandra98">
+            RishavChandra98
+        </a>
+    </p>
+
+    <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/rishav-chandra-prasad-b105163b6">
+            Rishav Chandra Prasad
+        </a>
+    </p>
+</section>
+
+</div>
+</div>
+
+</body>
+</html>
+
